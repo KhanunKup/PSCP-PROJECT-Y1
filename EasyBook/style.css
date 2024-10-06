@@ -1,0 +1,11 @@
+.IT{
+    width: 10%;
+    height: auto;
+}
+
+.room-pic{
+    width: 500px;
+    height: 500px;
+    flex-shrink: 0;
+    background-color: blue;
+}
