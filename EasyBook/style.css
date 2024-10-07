@@ -34,7 +34,7 @@ nav {
 .hero-text {
 	width: 755px;
 	text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-	font-size: 72px;
+	font-size: 10vh;
 	font-weight: 700;
 	line-height: normal;
 }
@@ -66,7 +66,7 @@ nav {
 .main-room-select-text {
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   font-family: Outfit;
-  font-size: 56px;
+  font-size: 7.5vh;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
@@ -74,7 +74,7 @@ nav {
 
 .sub-room-select-text {
   font-family: Outfit;
-  font-size: 18px;
+  font-size: 2.5vh;
   font-style: normal;
   font-weight: 500;
   line-height: normal;
