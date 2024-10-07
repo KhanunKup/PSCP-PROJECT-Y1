@@ -1,11 +1,81 @@
-.IT{
-    width: 10%;
-    height: auto;
+body {
+	font-family: Outfit,Arial, Helvetica, sans-serif;
+	margin: 0px;
 }
 
-.room-pic{
-    width: 500px;
-    height: 500px;
-    flex-shrink: 0;
-    background-color: blue;
+nav {
+	display: flex;
+	justify-content: space-between;
+	margin-left: 85px;
+	margin-right: 85px;
+	margin-top: 50px;
+	margin-bottom: 80px;
+}
+
+.it-logo:hover {
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+.easybook-logo:hover {
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+.hero {
+	display: flex;
+	margin-left: 85px;
+	margin-right: 85px;
+  margin-bottom: 100px;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.hero-text {
+	width: 755px;
+	text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	font-size: 72px;
+	font-weight: 700;
+	line-height: normal;
+}
+
+.hero-decoration {
+	width: 476px;
+  height: 462px;
+  flex-shrink: 0;
+}
+
+.room-select {
+  display: flex;
+  margin-left: 85px;
+  margin-right: 85px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.room-select-decoration {
+  width: 444px;
+  height: 502px;
+  flex-shrink: 0;
+}
+
+.room-select-text {
+  width: 540px;
+}
+
+.main-room-select-text {
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  font-family: Outfit;
+  font-size: 56px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.sub-room-select-text {
+  font-family: Outfit;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
 }
