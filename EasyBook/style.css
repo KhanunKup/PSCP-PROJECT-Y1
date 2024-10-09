@@ -5,13 +5,12 @@ body {
 
 .home-section {
   padding-top: 3.125rem;
-  padding-left: 5.3125rem;
-  padding-right: 5.3125rem;
 }
 
 nav {
 	display: flex;
-	justify-content: space-between;
+  align-items: center;
+	justify-content: space-around;
 	margin-bottom: 5rem;
 }
 
@@ -28,10 +27,9 @@ nav {
 .hero {
 	display: flex;
   flex-wrap: wrap;
-	margin-left: 5.3125rem;
   margin-bottom: 6.25rem;
 	align-items: center;
-	justify-content: space-between;
+	justify-content: space-evenly;
 }
 
 .hero-text {
@@ -50,17 +48,14 @@ nav {
 .room-select {
   display: flex;
   flex-wrap: wrap;
-  margin-left: 85px;
-  margin-right: 85px;
   margin-bottom: 6.25rem;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-evenly;
 }
 
 .room-select-decoration {
-  width: 444px;
-  height: 502px;
-  flex-shrink: 0;
+  width: 100%;
+	max-width: 476px;
 }
 
 .room-select-text {
@@ -88,19 +83,22 @@ nav {
   display: flex;
   row-gap: 5.625rem;
   flex-wrap: wrap;
-  margin-left: 4.75rem;
-  margin-right: 4.75rem;
   margin-bottom: 6.25rem;
-  justify-content: space-between;
+  justify-content: space-evenly;
 }
 
 .room-pic {
-  position: relative;
+  border-radius: 10px;
   width: 100%;
   max-width: 37.5rem;
   height: auto;
+  transition: 0.15s;
 }
 
+.room-pic:hover {
+  scale: 1.05;
+  opacity: 0.7;
+}
 
 footer {
   padding: 1rem;
@@ -115,17 +113,23 @@ footer {
   background-color: #2255A4;
 }
 
-.authour {
+.author {
   display: flex;
-  
 }
 
-.authour-spec {
-  
+.author-spec {
   cursor: pointer;
   margin-left: 0.625rem;
 }
 
 a {
   color: #FE6612;
+}
+
+a:hover {
+  opacity: 0.7;
+}
+
+a:active {
+  color: #f4b18d;
 }
