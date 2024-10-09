@@ -9,14 +9,21 @@ body {
 
 nav {
 	display: flex;
+  padding-left: 5.3125rem;
+  padding-right: 5.3125rem;
   align-items: center;
-	justify-content: space-around;
+	justify-content: space-between;
 	margin-bottom: 5rem;
 }
 
 .it-logo:hover {
   cursor: pointer;
   opacity: 0.7;
+}
+
+.easybook-logo {
+  font-size: 48px; 
+  font-weight: 700;
 }
 
 .easybook-logo:hover {
@@ -132,4 +139,26 @@ a:hover {
 
 a:active {
   color: #f4b18d;
+}
+
+@media (max-width: 430px) {
+  .easybook-logo {
+    font-size: 2.25rem;
+  }
+
+  .hero-text {
+    font-size: 3rem;
+  }
+
+  .main-room-select-text {
+    font-size: 2rem;
+  }
+
+  .sub-room-select-text {
+    font-size: 0.875rem;
+  }
+
+  footer {
+    font-size: 0.75rem;
+  }
 }
