@@ -4,5 +4,6 @@ from mypage import views
 urlpatterns = [
     path('',views.index),
     path('creative.html',views.creative),
-    path('index.html',views.index)
+    path('index.html',views.index),
+    path('checkscreative.html',views.room)
 ]
