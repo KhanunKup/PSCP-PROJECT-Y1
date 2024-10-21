@@ -44,7 +44,7 @@
                 <tr class="body-table">
                     <td>{{creativereser.student_id}}</td>
                     <td>{{creativereser.name}}</td>
-                    <td>{{creativereser.event_date}}</td>
+                    <td>{{ creativereser.event_date|date:"l, j F Y, H:i" }}</td>
                 </tr>
                 {% endfor %}
             </tbody>

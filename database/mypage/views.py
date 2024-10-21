@@ -10,7 +10,8 @@ def creative(request):
     return render(request,"creative.html")
 
 def room(request):
-    list_person = creativereser.objects.all()
+    list_person = creativereser.objects.order_by('event_date') #****************
+    # list_person = creativereser.objects.all()
     return render(request,"checkscreative.html",{"list_person":list_person})
 
 def room_2(request):

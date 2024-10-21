@@ -8,7 +8,7 @@ class creativereser(models.Model):
 
     def __str__(self):
         return f"{self.student_id} {self.name} {self.event_date}"
-    
+
 class peerone(models.Model):
     student_id_peer1 = models.IntegerField()
     name_peer1 = models.CharField(max_length=100)
