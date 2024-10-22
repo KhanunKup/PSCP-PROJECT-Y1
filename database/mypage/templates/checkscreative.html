@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
-    <title>Creative Ideation</title>
+    <title>Room Available</title>
 </head>
 <body>
     <nav class="crea-nav">
@@ -44,11 +44,12 @@
                 <tr class="body-table">
                     <td>{{creativereser.student_id}}</td>
                     <td>{{creativereser.name}}</td>
-                    <td>{{creativereser.event_date}}</td>
+                    <td>{{creativereser.event_date}} <b>|</b> {{creativereser.start_time}} - {{creativereser.end_time}}</td>
                 </tr>
                 {% endfor %}
             </tbody>
         </table>
     </div>
+    <h1 class="peer1-head">Peer 1 Room</h1>
 </body>
 </html>
