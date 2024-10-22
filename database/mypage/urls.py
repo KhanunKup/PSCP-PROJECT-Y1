@@ -4,6 +4,7 @@ from mypage import views
 urlpatterns = [
     path('',views.index),
     path('creative.html',views.creative),
+    path('peer1.html',views.peer1),
     path('index.html',views.index),
-    path('checkscreative.html',views.room)
+    path('checkscreative.html',views.room),
 ]

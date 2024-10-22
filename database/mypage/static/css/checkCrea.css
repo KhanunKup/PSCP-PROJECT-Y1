@@ -93,6 +93,7 @@ td {
     margin-left: 5rem;
     box-shadow: 20px 20px 50px 15px #FE6612 inset;
     cursor: pointer;
+    color: white;
 }
 
 .back-button:hover {

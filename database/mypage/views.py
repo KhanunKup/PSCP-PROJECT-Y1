@@ -1,6 +1,6 @@
 from django.shortcuts import render,redirect
 from django.contrib import messages
-from mypage.models import creativereser
+from mypage.models import creativereser,peer1reser
 from datetime import datetime
 
 # Create your views here.
@@ -9,8 +9,8 @@ def index(request):
 
 def creative(request):
     if request.method == 'POST':
-        id_input = request.POST['student-id-form']
-        name_input = request.POST['name-form']
+        id_inputpeer1 = request.POST['student-id-form']
+        name_inputpeer1 = request.POST['name-form']
         date_input = request.POST['date-form']
         start_input = request.POST['start-date-form']
         end_input = request.POST['end-date-form']
@@ -29,8 +29,8 @@ def creative(request):
             return redirect("creative.html")
 
         form = creativereser.objects.create(
-            student_id=id_input,
-            name=name_input,
+            student_id=id_inputpeer1,
+            name=name_inputpeer1,
             event_date=date_input,
             start_time=start_time,
             end_time=end_time
@@ -42,4 +42,41 @@ def creative(request):
 
 def room(request):
     list_person = creativereser.objects.all()
-    return render(request,"checkscreative.html",{"list_person":list_person})
+    list_personpeer1 = peer1reser.objects.all()
+    return render(request,"checkscreative.html",{
+        "list_person":list_person,
+        "list_personpeer1":list_personpeer1
+        })
+
+def peer1(request):
+    if request.method == 'POST':
+        id_inputpeer1 = request.POST['student-id-form-peer1']
+        name_inputpeer1 = request.POST['name-form-peer1']
+        date_inputpeer1 = request.POST['date-form-peer1']
+        start_inputpeer1 = request.POST['start-date-form-peer1']
+        end_inputpeer1 = request.POST['end-date-form-peer1']
+
+        start_time_1 = datetime.strptime(start_inputpeer1, '%H:%M').time()
+        end_time_1 = datetime.strptime(end_inputpeer1, '%H:%M').time()
+
+        overlappingpeer1_bookings = peer1reser.objects.filter(
+            event_datepeer1=date_inputpeer1,
+            start_timepeer1__lt=end_time_1,
+            end_timepeer1__gt=start_time_1
+        ).exists()
+
+        if overlappingpeer1_bookings:
+            messages.error(request, "The room has been booked during that time. Please enter a different time slot!")
+            return redirect("peer1.html")
+
+        form = peer1reser.objects.create(
+            student_idpeer1=id_inputpeer1,
+            namepeer1=name_inputpeer1,
+            event_datepeer1=date_inputpeer1,
+            start_timepeer1=start_time_1,
+            end_timepeer1=end_time_1
+        )
+        form.save()
+        return redirect("checkscreative.html")
+    else:
+        return render(request, "peer1.html")
