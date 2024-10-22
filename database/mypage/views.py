@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render,redirect
 from mypage.models import creativereser
 from mypage.models import peerone
 
@@ -7,7 +7,20 @@ def index(request):
     return render(request,"index.html")
 
 def creative(request):
-    return render(request,"creative.html")
+    if request.method == 'POST':
+        id_input = request.POST['student-id-form']
+        name_input = request.POST['name-form']
+        date_input = request.POST['date-form']
+
+        form = creativereser.objects.create(
+            student_id = id_input,
+            name = name_input,
+            event_date = date_input
+        )
+        form.save()
+        return redirect("checkscreative.html")
+    else:
+        return render(request,"creative.html")
 
 def room(request):
     list_person = creativereser.objects.all()

@@ -11,6 +11,11 @@
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
 }
 
+p {
+    text-align: center;
+    color: red;
+}
+
 .easybook-logo {
     font-size: 48px; 
     font-weight: 700;
@@ -24,7 +29,42 @@
 
 .head-text {
     text-align: center;
+    font-size: 55px;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.form-input {
+    height: 685px;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+
+.box-input {
+    width: 600px;
+    height: 550px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    box-shadow: 2px 0px 15px -5px;
+}
+
+
+label {
+    display: grid;
+    align-items: center;
+    text-align: center;
+    font-size: 35px;
+}
+
+.stu-css, .name-css, .date-css{
+    width: 23rem;
+    height: 2.5rem;
+    margin-top: 25px;
+    margin-bottom: 20px;
+    border: 1px solid black;
+    border-radius: 5px;
 }
 
 a {
@@ -32,10 +72,28 @@ a {
     color: white;
 }
 
+.submit-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.submit-button {
+    cursor: pointer;
+    background-color: #2255A4;
+    color: white;
+    font-size: 22px;
+    padding: 10px 35px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px -5px #000000;
+}
+
 .back-button {
     width: 120px;
     height: 60px;
-    font-size: 20px;
+    font-size: 25px;
     border: none;
     border-radius: 10px;
     margin-top: 0.5rem;
@@ -47,4 +105,10 @@ a {
 .back-button:hover {
     scale: 1.15;
     transition: all 0.1s ease-in-out;
+}
+
+.submit-button:hover {
+    scale: 1.15;
+    transition: all 0.3s ease-in-out;
+    background-color: #FE6612;;
 }

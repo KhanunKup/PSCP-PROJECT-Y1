@@ -23,11 +23,33 @@
     </nav>
 
     <div class="container">
-        <button class="back-button"><a href = "index.html">BACK</a></button>
+      <a href = "index.html"><button class="back-button">BACK</button></a>
     </div>
 
     <div class="infor-form">
-        <h1 class="head-text"><b>ห้อง <span style="color: #2255A4;">Creative</span> and <span style="color: #FE6612;">Ideation 1</span></b></h1>
+        <h1 class="head-text"><b><span style="color: #2255A4;">Creative</span> and <span style="color: #FE6612;">Ideation 1</span></b></h1>
+    </div>
+    <div class="form-input">
+
+      <div class="box-input">
+
+          <form method="post" action="creative.html">
+            {% csrf_token %}
+
+            <label for="st-id"><b>Student ID</b></label>
+            <input type="text" class="stu-css" name="student-id-form" placeholder="Enter your student ID...">
+
+            <label for="st-name"><b>Name</b></label>
+            <input type="text" class="name-css" name="name-form" placeholder="Enter your name...">
+
+            <label for="st-date"><b>Date & Time</b></label>
+            <p>Can't be booked more than 3 hours</p>
+            <input type="datetime-local" class="date-css" name="date-form">
+            <div class="submit-section">
+              <input type="submit" class="submit-button">
+            </div>
+          </form>
+      </div>
     </div>
 </body>
 </html>
