@@ -52,7 +52,7 @@
     </div>
 
     <h1 class="peer1-head">Peer 1 Room</h1>
-    
+
     <div class="peer1">
         <div class="table-infor">
             <table>
@@ -69,6 +69,31 @@
                         <td>{{peer1reser.student_idpeer1}}</td>
                         <td>{{peer1reser.namepeer1}}</td>
                         <td>{{peer1reser.event_datepeer1}} <b>|</b> {{peer1reser.start_timepeer1}} - {{peer1reser.end_timepeer1}}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <h1 class="peer1-head">Peer 2 Room</h1>
+    
+    <div class="peer2">
+        <div class="table-infor">
+            <table>
+                <thead>
+                    <tr>
+                        <th class="id-th">Student ID</th>
+                        <th class="name-th">Name</th>
+                        <th class="date-th">Date and time</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {%for peer2reser in list_personpeer2 %}
+                    <tr class="body-table">
+                        <td>{{peer2reser.student_idpeer2}}</td>
+                        <td>{{peer2reser.namepeer2}}</td>
+                        <td>{{peer2reser.event_datepeer2}} <b>|</b> {{peer2reser.start_timepeer2}} - {{peer2reser.end_timepeer2}}</td>
                     </tr>
                     {% endfor %}
                 </tbody>
