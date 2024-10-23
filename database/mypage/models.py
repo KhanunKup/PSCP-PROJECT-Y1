@@ -30,3 +30,13 @@ class peer2reser(models.Model):
 
     def __str__(self):
         return f"{self.student_idpeer2} {self.namepeer2} {self.event_datepeer2} {self.end_timepeer2}"
+
+class peer3reser(models.Model):
+    student_idpeer3 = models.IntegerField()
+    namepeer3 = models.CharField(max_length=100)
+    event_datepeer3 = models.DateField()
+    start_timepeer3 = models.TimeField(null=True, blank=True)
+    end_timepeer3 = models.TimeField(null=True, blank=True)
+
+    def __str__(self):
+        return f"{self.student_idpeer3} {self.namepeer3} {self.event_datepeer3} {self.end_timepeer3}"

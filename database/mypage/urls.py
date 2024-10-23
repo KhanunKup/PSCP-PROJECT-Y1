@@ -6,6 +6,7 @@ urlpatterns = [
     path('creative.html',views.creative),
     path('peer1.html',views.peer1),
     path('peer2.html',views.peer2),
+    path('peer3.html', views.peer3),
     path('index.html',views.index),
     path('checkscreative.html',views.room),
 ]

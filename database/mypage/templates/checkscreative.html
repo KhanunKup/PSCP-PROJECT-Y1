@@ -100,5 +100,29 @@
             </table>
         </div>
     </div>
+
+    <h1 class="peer1-head">Peer 3 Room</h1>
+    <div class="peer2">
+        <div class="table-infor">
+            <table>
+                <thead>
+                    <tr>
+                        <th class="id-th">Student ID</th>
+                        <th class="name-th">Name</th>
+                        <th class="date-th">Date and time</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {%for peer3reser in list_personpeer3 %}
+                    <tr class="body-table">
+                        <td>{{peer3reser.student_idpeer3}}</td>
+                        <td>{{peer3reser.namepeer3}}</td>
+                        <td>{{peer3reser.event_datepeer3}} <b>|</b> {{peer3reser.start_timepeer3}} - {{peer3reser.end_timepeer3}}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
 </body>
 </html>
