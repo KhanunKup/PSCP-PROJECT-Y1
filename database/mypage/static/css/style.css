@@ -12,6 +12,12 @@ nav {
   align-items: center;
 	justify-content: space-around;
 	margin-bottom: 5rem;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+  padding: 1.5rem 80px 1.5rem 80px;
+  position: sticky;
+  top: 0;
+  background-color: white;
+  z-index: 100;
 }
 
 .it-logo:hover {
