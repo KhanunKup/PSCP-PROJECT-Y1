@@ -14,6 +14,12 @@ def is_not_integer(value):
 def index(request):
     return render(request,"index.html")
 
+def test(request):
+    return render(request, 'test.html')
+
+def test_creative(request):
+    return render(request, 'test-creative.html')
+
 def room(request):
     list_person = creativereser.objects.order_by('event_date')
     list_personpeer1 = peer1reser.objects.order_by('event_datepeer1')

@@ -3,11 +3,11 @@ body {
 	font-family: Outfit,Arial, Helvetica, sans-serif;
 }
 
-.home-section {
-  padding-top: 3.125rem;
-}
+/* .home-section {
+} */
 
 nav {
+  padding-top: 3.125rem;
 	display: flex;
   align-items: center;
 	justify-content: space-around;
@@ -20,7 +20,7 @@ nav {
 }
 
 .easybook-logo {
-  font-size: 48px; 
+  font-size: 48px;
   font-weight: 700;
 }
 
