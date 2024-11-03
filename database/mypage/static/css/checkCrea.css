@@ -7,6 +7,15 @@ h1 {
     text-align: center;
 }
 
+.nav-select{
+    font-size: 22px;
+    color : #2255A4;
+}
+
+.peer1-head , .peer2-head , .peer3-head {
+    margin: 3rem;
+}
+
 .crea-nav {
     display: flex;
     align-items: center;
@@ -36,13 +45,13 @@ h1 {
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
-.creative-head, .peer1-head {
+.creative-head, .peer1-head, .peer2-head , .peer3-head {
     font-size: 70px;
 }
 
 a {
     text-decoration: none;
-    color: white;
+    color: rgb(0, 0, 0);
 }
 
 .table-infor {
@@ -98,9 +107,13 @@ td {
     box-shadow: 20px 20px 50px 15px #FE6612 inset;
     cursor: pointer;
     color: white;
+    transition: all 0.1s ease-in-out;
+}
+
+.nav-select:hover {
+    color: #FE6612;
 }
 
 .back-button:hover {
     scale: 1.15;
-    transition: all 0.1s ease-in-out;
 }
