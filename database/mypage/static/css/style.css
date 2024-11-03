@@ -1,62 +1,43 @@
 body {
   margin: 0;
-	font-family: Outfit,Arial, Helvetica, sans-serif;
+  font-family: Outfit, Arial, Helvetica, sans-serif;
 }
-
-/* .home-section {
-} */
 
 nav {
   padding-top: 3.125rem;
-	display: flex;
+  display: flex;
   align-items: center;
-	justify-content: space-around;
-	margin-bottom: 5rem;
+  justify-content: space-between;
+  margin-bottom: 2rem;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
-  padding: 1.5rem 80px 1.5rem 80px;
+  padding: 1.5rem 80px;
   position: sticky;
   top: 0;
   background-color: white;
   z-index: 100;
 }
 
+.it-logo {
+  margin-right: auto;
+}
+
 .it-logo:hover {
   cursor: pointer;
-  opacity: 0.7;
+  opacity: 0.9;
 }
 
 .easybook-logo {
   font-size: 48px;
   font-weight: 700;
+  text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.5);
 }
 
 .easybook-logo:hover {
   cursor: pointer;
-  opacity: 0.7;
+  opacity: 0.9;
 }
 
 .hero {
-	display: flex;
-  flex-wrap: wrap;
-  margin-bottom: 6.25rem;
-	align-items: center;
-	justify-content: space-evenly;
-}
-
-.hero-text {
-	width: 47rem;
-	text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-	font-size: 4.5rem;
-	font-weight: 700;
-	line-height: normal;
-}
-
-.hero-decoration {
-  width: 100%;
-	max-width: 476px;
-}
-
-.room-select {
   display: flex;
   flex-wrap: wrap;
   margin-bottom: 6.25rem;
@@ -64,20 +45,45 @@ nav {
   justify-content: space-evenly;
 }
 
+.hero-text {
+  width: 47rem;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  font-size: 4.5rem;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.hero-decoration {
+  width: 100%;
+  max-width: 476px;
+}
+
+.room-select {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 6.25rem;
+  align-items: center;
+  justify-content: center;
+}
+
 .room-select-decoration {
   width: 100%;
-	max-width: 476px;
+  max-width: 476px;
 }
 
 .room-select-text {
-  width: 540px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  justify-content: center;
+  width: 950px;
+  text-align: center;
 }
 
 .main-room-select-text {
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   font-family: Outfit;
   font-size: 3.5rem;
-  font-style: normal;
   font-weight: 700;
   line-height: normal;
 }
@@ -85,7 +91,6 @@ nav {
 .sub-room-select-text {
   font-family: Outfit;
   font-size: 1.125rem;
-  font-style: normal;
   font-weight: 500;
   line-height: normal;
 }
@@ -107,8 +112,8 @@ nav {
 }
 
 .room-pic:hover {
-  scale: 1.05;
-  opacity: 0.7;
+  transform: scale(1.05);
+  opacity: 0.9;
 }
 
 footer {
@@ -138,47 +143,70 @@ a {
 }
 
 a:hover {
-  opacity: 0.7;
+  opacity: 0.9;
 }
 
 a:active {
   color: #f4b18d;
 }
 
-@media (max-width: 430px) {
-  .it-logo {
-    max-width: 9rem;
+@media (max-width: 768px) {
+  nav {
+    padding: 1rem 20px;
+    justify-content: space-between;
   }
 
   .easybook-logo {
-    font-size: 1.8rem;
-  }
-
-  .hero-text {
-    margin-left: 10%;
-    font-size: 3rem;
-  }
-
-  .hero-decoration {
-    scale: 0.8;
-  }
-
-  .main-room-select-text {
-    margin-left: 10%;
     font-size: 2rem;
   }
 
-  .sub-room-select-text {
-    font-size: 0.875rem;
-    margin-left: 10%;
+  .it-logo {
+    max-width: 8rem;
+  }
+
+  .hero{
+    margin-bottom: 10px;
+  }
+  
+  .easyhero{
+    font-size: 4rem;
+  }
+
+  .hero-text {
+    width: 100%;
+    font-size: 3rem;
+    text-align: center;
+  }
+
+  .hero-decoration {
+    display: none;
+  }
+
+  .room-select{
+    display: none;
   }
 
   .room-pic {
-    scale: 0.85;
+    max-width: 100%;
+    transform: scale(0.85);
+  }
+
+  .room-pic:hover {
+    transform: scale(0.9);
   }
 
   footer {
     flex-direction: column;
-    font-size: 0.75rem;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 430px) {
+  .hero-text {
+    font-size: 2.5rem;
+  }
+
+  .main-room-select-text {
+    font-size: 1.5rem;
   }
 }

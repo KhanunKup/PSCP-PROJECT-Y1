@@ -1,62 +1,77 @@
 * {
     margin: 0;
-    font-family: Outfit,Arial, Helvetica, sans-serif;
+    font-family: Outfit, Arial, Helvetica, sans-serif;
 }
 
 h1 {
     text-align: center;
 }
 
-.nav-select{
-    font-size: 22px;
-    color : #2255A4;
-}
-
-.peer1-head , .peer2-head , .peer3-head {
-    margin: 3rem;
-}
-
 .crea-nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 1.5rem 80px 1.5rem 80px;
+    padding: 1.5rem 5%;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
     position: sticky;
     top: 0;
     background-color: white;
     z-index: 100;
+    flex-wrap: wrap;
 }
 
 .easybook-logo {
-    font-size: 48px; 
+    font-size: 2.5rem;
     font-weight: 700;
-  }
+    white-space: nowrap;
+    text-shadow: #000000;
+}
+
+.nav-select {
+    display: flex;
+    align-items: center;
+    color: #000000;
+    font-size: 25px;
+}
 
 .container {
+    width: fit-content;
     height: 7rem;
     display: flex;
     align-items: center;
 }
 
 .head-text {
-    color: #2baf2b;
+    color: black;
     text-align: center;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-size: 5rem;
+    padding-bottom: 20px;
+    padding-top: 20px;
 }
 
-.creative-head, .peer1-head, .peer2-head , .peer3-head {
+.creative-head, .peer1-head, .peer2-head, .peer3-head {
     font-size: 70px;
+    color: #2255A4;
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+}
+
+.peer1-head, .peer2-head, .peer3-head {
+    padding-top: 5rem;
 }
 
 a {
     text-decoration: none;
-    color: rgb(0, 0, 0);
+    color: white;
+}
+
+.peer3{
+    padding-bottom: 5rem;
 }
 
 .table-infor {
     display: flex;
-    margin-top: 50px;
+    margin-top: 10px;
     justify-content: center;
     align-items: center;
 }
@@ -97,23 +112,83 @@ td {
 }
 
 .back-button {
+    position: fixed; 
+    top: 8rem;
+    left: 20px;
     width: 120px;
     height: 60px;
     font-size: 25px;
     border: none;
     border-radius: 10px;
-    margin-top: 0.5rem;
-    margin-left: 5rem;
-    box-shadow: 20px 20px 50px 15px #FE6612 inset;
-    cursor: pointer;
+    box-shadow: #000000 0px 0px 3px;
+    background-color: #FE6612;
     color: white;
-    transition: all 0.1s ease-in-out;
+    cursor: pointer;
 }
 
-.nav-select:hover {
-    color: #FE6612;
+table {
+    box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.5);
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
 }
 
-.back-button:hover {
-    scale: 1.15;
+a:hover {
+    opacity: 0.9;
+  }
+
+@media (max-width: 768px) {
+    .crea-nav {
+        padding: 1rem 2%;
+    }
+    .head-text {
+        font-size: 4rem;
+    }
+    .nav-select {
+        display: none;
+    }
+
+    .back-button {
+        width: calc(100% - 40px);
+        left: 50%;
+        transform: translateX(-50%);
+        top: auto;
+        bottom: 20px;
+        transition: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .crea-nav {
+        padding: 0.5rem 1%;
+    }
+
+    .easybook-logo {
+        font-size: 1.5rem;
+    }
+    .head-text {
+        font-size: 3rem;
+    }
+    
+    .creative-head, .peer1-head, .peer2-head, .peer3-head {
+        font-size: 40px;
+    }
+
+    th {
+        font-size: 20px;
+    }
+
+    td {
+        font-size: 16px;
+    }
+
+    .back-button {
+        height: 50px;
+        font-size: 20px;
+        width: calc(100% - 40px);
+        left: 50%;
+        transform: translateX(-50%);
+        top: auto;
+        bottom: 20px;
+        transition: none;
+    }
 }
